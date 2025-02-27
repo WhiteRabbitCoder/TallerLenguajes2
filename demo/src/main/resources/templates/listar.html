@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<p>Usuario usuario = new Usuario("Juan", "password123", "juan@example.com");</p>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title th:text="${titulo}">Title</title>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Email</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="usuario : ${usuarios}">
+                <td th:text="${usuario.username}">Nombre</td>
+                <td th:text="${usuario.email}">Email</td>
+            </tr>
+    </table>
+</body>
+</html>
